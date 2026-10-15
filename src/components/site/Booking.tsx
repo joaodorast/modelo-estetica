@@ -21,7 +21,8 @@ export function Booking() {
 
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
+    const fd = new FormData(e.currentTarget);
+    const data = { name: fd.get("name") ?? "", contact: fd.get("contact") ?? "", treatment: fd.get("treatment") ?? "", period: fd.get("period") ?? "", note: fd.get("note") ?? "" };
     const r = schema.safeParse(data);
     if (!r.success) {
       const errs: Errors = {};
