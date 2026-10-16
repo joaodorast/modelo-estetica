@@ -2,7 +2,7 @@
 
 Site institucional para estética e spa — rituais faciais, corporais e agendamento on-line.
 
-**Site no ar:** https://modelo-estetica.vercel.app
+**Site no ar:** https://modelo-estetica-site.vercel.app
 
 ## Tecnologias
 
