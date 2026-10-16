@@ -1,24 +1,49 @@
-# Pixel Perfect Replica
+# Modelo Estética
 
-Implement exactly the screenshot and nothing else
+Site institucional para estética e spa — rituais faciais, corporais e agendamento on-line.
 
-This project was built with [Lovable](https://lovable.dev).
+**Site no ar:** https://modelo-estetica.vercel.app
 
-## Build with Lovable
+## Tecnologias
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e08e68df-2820-497a-b9e8-b855bd346d39).
+- [TanStack Start](https://tanstack.com/start) + React 19 + TypeScript
+- Tailwind CSS 4
+- Nitro (deploy na Vercel)
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Rodando localmente
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requer Node.js 20+.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+O site abre em `http://localhost:8080` (ou na porta indicada no terminal).
+
+## Personalizando
+
+Todos os dados comerciais ficam em [`src/config/brand.ts`](src/config/brand.ts):
+
+- `name`: nome da marca (hoje, "Sua Marca", provisório)
+- `whatsapp` / `email`: canal que recebe as solicitações de agendamento
+- `phone`, `address`, `hours`, `instagram`: aparecem no agendamento e no rodapé
+- `treatments`: tratamentos, durações, descrições e fotos
+- `offer`: o ritual de boas-vindas (preço opcional)
+- `team` e `testimonials`: equipe e depoimentos **reais** (vazios, as seções mostram uma versão neutra, sem dados inventados)
+
+Campos vazios não aparecem no site.
+
+## Scripts
+
+| Comando           | O que faz                   |
+| ----------------- | --------------------------- |
+| `npm run dev`     | servidor de desenvolvimento |
+| `npm run build`   | build de produção           |
+| `npm run preview` | pré-visualiza o build       |
+| `npm run lint`    | ESLint + Prettier           |
+| `npm test`        | testes (Vitest)             |
+
+## Créditos das fotos
+
+Fotografias de [Unsplash](https://unsplash.com), sob a licença Unsplash.
